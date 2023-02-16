@@ -1,0 +1,72 @@
+BROKER SCHEMA hemit.no
+
+DECLARE mySharedRow SHARED ROW; 
+
+-- TESTIN GIT
+--CREATE SCHEMA testSchema 
+----         DECLARE mySharedRow SHARED ROW; 
+--         --DECLARE initialized SHARED BOOLEAN myINIT(); 
+--  
+--         CREATE COMPUTE MODULE testModule 
+--        
+--         CREATE FUNCTION Main() RETURNS BOOLEAN 
+--         BEGIN 
+--         SET OutputRoot.XMLNSC.Top.TEST.Result1 VALUE = initialized; 
+--         SET OutputRoot.XMLNSC.Top.TEST.Result2 = mySharedRow; 
+--       END; 
+--
+--     END MODULE; 
+
+
+-- CREATE FUNCTION myINIT( ) RETURNS BOOLEAN 
+--     BEGIN 
+----      LOG EVENT VALUES('myINIT CALLED'); 
+----      SET mySharedRow.Top[] = SELECT A.MyCol1, A.MyCol2 from Database.Test AS A; 
+--
+--		SET mySharedRow.ClientData[1].Id = 1;
+--		SET mySharedRow.ClientData[1].RespirationRate.Data[1] = 18;
+--		SET mySharedRow.ClientData[1].RespirationRate.Data[2] = 19;
+--		SET mySharedRow.ClientData[1].RespirationRate.Data[3] = 20;
+--		SET mySharedRow.ClientData[1].HeartRate.Data[1] = 41;
+--		SET mySharedRow.ClientData[1].HeartRate.Data[2] = 42;
+--		SET mySharedRow.ClientData[1].HeartRate.Data[3] = 43;
+--		SET mySharedRow.ClientData[1].HeartRate.Data[4] = 44;
+--	
+--		SET mySharedRow.ClientData[2].Id = 2;
+--		SET mySharedRow.ClientData[2].RespirationRate.Data[1] = 1;
+--		SET mySharedRow.ClientData[2].RespirationRate.Data[2] = 2;
+--		SET mySharedRow.ClientData[2].RespirationRate.Data[3] = 2;
+--		SET mySharedRow.ClientData[2].HeartRate.Data[1] = 31;
+--		SET mySharedRow.ClientData[2].HeartRate.Data[2] = 32;
+--		SET mySharedRow.ClientData[2].HeartRate.Data[3] = 33;
+--		SET mySharedRow.ClientData[2].HeartRate.Data[4] = 34;
+--
+--		
+--		RETURN TRUE; 
+--     END; 
+     
+ CREATE FUNCTION InitiateShared( )
+     BEGIN 
+--      LOG EVENT VALUES('myINIT CALLED'); 
+--      SET mySharedRow.Top[] = SELECT A.MyCol1, A.MyCol2 from Database.Test AS A; 
+
+		SET mySharedRow.ClientData[1].Id = 1;
+		SET mySharedRow.ClientData[1].RespirationRate.Data[1] = 18;
+		SET mySharedRow.ClientData[1].RespirationRate.Data[2] = 19;
+		SET mySharedRow.ClientData[1].RespirationRate.Data[3] = 20;
+		SET mySharedRow.ClientData[1].HeartRate.Data[1] = 41;
+		SET mySharedRow.ClientData[1].HeartRate.Data[2] = 42;
+		SET mySharedRow.ClientData[1].HeartRate.Data[3] = 43;
+		SET mySharedRow.ClientData[1].HeartRate.Data[4] = 44;
+	
+		SET mySharedRow.ClientData[2].Id = 2;
+		SET mySharedRow.ClientData[2].RespirationRate.Data[1] = 1;
+		SET mySharedRow.ClientData[2].RespirationRate.Data[2] = 2;
+		SET mySharedRow.ClientData[2].RespirationRate.Data[3] = 2;
+		SET mySharedRow.ClientData[2].HeartRate.Data[1] = 31;
+		SET mySharedRow.ClientData[2].HeartRate.Data[2] = 32;
+		SET mySharedRow.ClientData[2].HeartRate.Data[3] = 33;
+		SET mySharedRow.ClientData[2].HeartRate.Data[4] = 34;
+
+		
+     END; 
